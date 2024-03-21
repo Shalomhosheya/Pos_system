@@ -1,0 +1,53 @@
+.img{
+    width: 400px;
+    height:400px;
+    position: relative;
+    top: 5vw;
+    left: 10vw;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+.para{
+    align-content: center;
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+
+}
+p{
+    font-size: 25px;
+}
+h1{
+    font-size: 25px;
+    position: fixed;
+    top: 100px;
+    left: 5vw;
+
+}
+#clear{
+    position: fixed;
+    bottom: 275px;
+    left: 750px;
+}
+/*#ADD{*/
+/*    position: relative;*/
+/*    bottom: -1vh;*/
+/*    left: 55vw;*/
+/*}*/
+.adjust{
+    position: relative;
+    bottom: -1vh;
+    left: 55vw;
+}
+@media screen and (max-width: 365px){
+    .para{
+        align-content: center;
+        position: absolute;
+        top: 30vh;
+        left: 5vw;
+
+    }
+    p{
+        font-size: 20px;
+    }
+}
