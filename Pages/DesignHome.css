@@ -10,7 +10,7 @@
 .para{
     align-content: center;
     position: absolute;
-    top: 30vh;
+    top: 25vh;
     left: 40vw;
 
 }
@@ -25,19 +25,44 @@ h1{
 
 }
 #clear{
-    position: fixed;
-    bottom: 275px;
-    left: 750px;
-}
-/*#ADD{*/
-/*    position: relative;*/
-/*    bottom: -1vh;*/
-/*    left: 55vw;*/
-/*}*/
-.adjust{
     position: relative;
-    bottom: -1vh;
-    left: 55vw;
+    top: 2vh;
+    left:40vw;
+    width: 100px;
+    height: 50px;
+}
+#ADD1{
+    position: relative;
+    top: 2vh;
+    left: 30vw;
+    width: 100px;
+    height: 50px;
+
+}
+
+#remove{
+    position: relative;
+    top: 2vh;
+    left: 50vw;
+    width: 100px;
+    height: 50px;
+}
+#update{
+    position: relative;
+    top: 2vh;
+    left: 60vw;
+    width: 100px;
+    height: 50px;
+}
+.table{
+    position: absolute;
+    bottom: 100px;
+    top: 200px;
+}
+.search{
+    position: absolute;
+    bottom: 20px;
+
 }
 @media screen and (max-width: 365px){
     .para{
@@ -50,4 +75,16 @@ h1{
     p{
         font-size: 20px;
     }
+
+}
+@media screen and (max-width:700px ){
+    .adjust{
+        background-color: aqua;
+    }
+
+    /*#ADD1{*/
+    /*    position: relative;*/
+    /*    top: 0vh;*/
+    /*    left: -20vw;*/
+    /*}*/
 }
