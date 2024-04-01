@@ -18,10 +18,10 @@ p{
     font-size: 25px;
 }
 h1{
+    position: relative;
+    top: 20px;
+    left: 60px;
     font-size: 25px;
-    position: fixed;
-    top: 100px;
-    left: 5vw;
 
 }
 #clear{
