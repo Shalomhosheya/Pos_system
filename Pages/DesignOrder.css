@@ -1,0 +1,48 @@
+h1{
+    position: relative;
+    top: 20px;
+    left: 60px;
+    font-size: 25px;
+}
+.block{
+    width: 400px;
+    aspect-ratio: 1/1;
+    background: aqua;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+
+}
+.data{
+    position: absolute;
+    top: -20px;
+    left: 100px;
+}
+.data1{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.data2{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+.data3{
+    position: absolute;
+    top: 60px;
+    left: -10px;
+    width: 0;
+    left: 100px;
+}
+.data4{
+
+}
+
+
+@media all and (max-width: 768px){
+
+}
+@media all and (max-width: 425px){
+
+}
