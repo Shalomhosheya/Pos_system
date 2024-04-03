@@ -119,8 +119,8 @@ position: absolute;
     width: 453px;
     aspect-ratio: 1/1;
     background: yellow;
-    position: absolute;
-    top: 155px;
+    position: relative;
+    top: -830px;
     left: 1000px;
 
 }
