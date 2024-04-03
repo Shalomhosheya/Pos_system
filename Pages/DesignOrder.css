@@ -5,13 +5,17 @@ h1{
     font-size: 25px;
 }
 .block{
-    width: 400px;
+    width: 450px;
     aspect-ratio: 1/1;
     background: aqua;
-    position: absolute;
-    top: 200px;
+    position: relative;
+    top: 50px;
     left: 20px;
 
+}
+.up{
+    position: relative;
+    top: 50px;
 }
 .data{
     position: absolute;
@@ -35,11 +39,91 @@ h1{
     width: 0;
     left: 100px;
 }
-.data4{
+.sep{
+    position: relative;
+    top: 70px;
+}
+.int{
+    width: 300px;
+    position: relative;
+    top: 80px;
+    left: 20px;
 
 }
+.btn1{
+    position: absolute;
+    top: 350px;
+    left: 360px;
+    width: 80px;
+   height: 30px;
+}
+.int2{
+    width: 300px;
+    position: relative;
+    top: 10px;
+    left: 20px;
 
+}
+.text{
+    font-size: 14px;
+    width: 105px;
+}
+.orId{
+    position: relative;
+    left: -80px;
+    top: 35px;
+}
+.sep2{
+    position: absolute;
+    left: 125px;
+}
+.sep3{
+    position: absolute;
+    left: 125px;
+    top: 50px;
+}
+.jump{
+    position: absolute;
+    top: 115px;
+}
+.jump2{
+position: absolute;
+    top: 180px;
+}
+.date{
+    position: absolute;
+    top: 280px;
+    left: 125px;
 
+}
+.dlabel{
+    position: absolute;
+    left: -65px;
+
+}
+.detail{
+    top: 0;
+    position: absolute;
+    left: 100px;
+    font-size: 30px;
+}
+.block2{
+    background: lawngreen;
+    position: relative;
+    left: 500px;
+    top: -377px;
+    width: 450px;
+    aspect-ratio: 1/1;
+}
+.block3{
+    width: 453px;
+    aspect-ratio: 1/1;
+    background: yellow;
+    position: absolute;
+    top: 155px;
+    left: 1000px;
+
+}
 @media all and (max-width: 768px){
 
 }
