@@ -153,6 +153,13 @@ position: absolute;
     top: 400px;
     left: 350px;
 }
+.table1{
+    position: absolute;
+    top: 650px;
+    width: 1300px;
+    aspect-ratio: 1/1;
+    left: 100px;
+}
 @media all and (max-width: 768px){
 
 }
