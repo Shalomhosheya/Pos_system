@@ -33,6 +33,7 @@
 <section id="Home"style="display: block">
   <div >
     <input type="image" src="Assets/images/8367360.jpg" class="img">
+
   </div>
   <div class="para">
     <p>
@@ -345,46 +346,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="Assets/jquery-3.7.1.min.js"></script>
-<script>
-$("#navHome").on('click',()=>{
-  $("#Home").css({display:"block"})
-  $("#Customer").css({display:"none"})
-  $("#Item").css({display:"none"})
-  $("#Order").css({display:"none"})
-  $("#help").css({display:"none"})
-})
-
-$("#navCus").on('click',()=>{
-  $("#Home").css({display:"none"})
-  $("#Customer").css({display:"block"})
-  $("#Item").css({display:"none"})
-  $("#Order").css({display:"none"})
-  $("#help").css({display:"none"})
-})
-
-$("#navItem").on('click',()=>{
-  $("#Home").css({display:"none"})
-  $("#Customer").css({display:"none"})
-  $("#Item").css({display:"block"})
-  $("#Order").css({display:"none"})
-  $("#help").css({display:"none"})
-})
-
-$("#navOrders").on('click',()=>{
-  $("#Home").css({display:"none"})
-  $("#Customer").css({display:"none"})
-  $("#Item").css({display:"none"})
-  $("#Order").css({display:"block"})
-  $("#help").css({display:"none"})
-})
-
-$("#navHelp").on('click',()=>{
-  $("#Home").css({display:"none"})
-  $("#Customer").css({display:"none"})
-  $("#Item").css({display:"none"})
-  $("#Order").css({display:"none"})
-  $("#help").css({display:"block"})
-})
+<script src="Assets/js_files/process.js">
 
 </script>
 </body>
