@@ -41,81 +41,75 @@
     </p>
   </div>
 </section>
-<section id="Customer"style="display: none">
 
-  <div>
-    <h1>Customer Form</h1>
+<section id="Customer"style="display: none">
+  <br>
+  <div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <h1> Customer Form</h1>
+    </div>
   </div>
   <br>
-  <br>
-  <br>
-  <form class="row g-4">
-    <div class="col-5">
-      <label for="inputAddress" class="form-label">Customer ID</label>
-      <input type="text" class="form-control" id="inputCusID" placeholder="Enter ID">
-    </div>
-    <div class="col-5">
-      <label for="inputAddress" class="form-label">Customer Name</label>
-      <input type="text" class="form-control" id="NameCus" placeholder="Enter name">
-    </div>
+  <div class="container text-center"style="position: absolute;left: 0">
+    <div class="row">
+      <div class="col-6 col-sm-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">ID...........</span>
+          <input type="text" class="form-control"id="inputCusID" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-6 col-sm-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2">Name.................</span>
+          <input type="text" class="form-control" id="NameCus" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+  </div>
+    <br>
+  <div class="container text-center"style="position: absolute;left: 0">
+    <div class="row">
+      <div class="col-6 col-sm-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Address</span>
+          <input type="text" class="form-control" id="inputAddressCus" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-6 col-sm-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon4">Phone number</span>
+          <input type="text" class="form-control" id="inputAddress2Cus" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      </div>
+  </div>
 
-    <div class="col-5">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddressCus" placeholder="Enter Address">
-    </div>
-    <div class="col-5">
-      <label for="inputAddress" class="form-label">Phone Number</label>
-      <input type="text" class="form-control" id="inputAddress2Cus" placeholder="Enter Number">
-    </div>
-    <div style="position: relative;left: 30vw">
-      <button type="button" class="btn btn-primary">Add</button>
-      <button type="button" class="btn btn-secondary">Clear</button>
-      <button type="button" class="btn btn-success">Remove</button>
-      <button type="button" class="btn btn-danger">Update</button>
-    </div>
+    <br>
+    <button type="button" class="btn btn-primary"id="addBtn">Add</button>
+    <button type="button" class="btn btn-secondary"id="updatebtn">Update</button>
+    <button type="button" class="btn btn-success"id="reset">clear</button>
+    <button type="button" class="btn btn-danger"id="delete">delete</button>
+    <br>
+    <br>
+  </div>
+    <table class="table table-striped table-dark center">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone Number</th>
+      </tr>
+      </thead>
+      <tbody id="cusTablebody">
 
-    <div class="table">
-      <table class="table table-dark">
-        <thead>
-        <tr>
-          <th scope="col">Customer ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Address</th>
-          <th scope="col">Phone num</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Kalutara</td>
-          <td>07758245987</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Galle</td>
-          <td>07758245987</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>Colombo</td>
-          <td>07758245987</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="search row g-2">
-      <nav class="navbar navbar-light bg-dark col-2">
-        <form class="form-inline my-2 my-lg-0  ">
-          <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
-        </form>
-      </nav>
-    </div>
+      </tbody>
+    </table>
 
-  </form>
+    <form class="d-flex" role="search" style="position: absolute;left: 0;top: 30rem">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+</div>
 
 </section>
 
@@ -147,15 +141,15 @@
       <input type="text" class="form-control" id="inputAddress3" placeholder="Enter Number">
     </div>
     <div style="position: relative;left: 30vw">
-      <button type="button" class="btn btn-primary">Add</button>
-      <button type="button" class="btn btn-secondary">Update</button>
-      <button type="button" class="btn btn-success">Delete</button>
-      <button type="button" class="btn btn-danger">Clear</button>
+      <button type="button" class="btn btn-primary"id="item_Add">Add</button>
+      <button type="button" class="btn btn-secondary"id="item_Update">Update</button>
+      <button type="button" class="btn btn-success"id="item_Delete">Delete</button>
+      <button type="button" class="btn btn-danger"id="item_Clear">Clear</button>
     </div>
     <div style="position: absolute;top: 20vh">
       <table class="table table-dark">
         <thead>
-        <tr >
+        <tr>
           <th scope="col">Item ID</th>
           <th scope="col">type</th>
           <th scope="col">Title</th>
@@ -163,27 +157,8 @@
           <th scope="col">Unit Price</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-          <td>@twitter</td>
-        </tr>
+        <tbody id="item_table_body">
+
         </tbody>
       </table>
     </div>
@@ -346,8 +321,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="Assets/jquery-3.7.1.min.js"></script>
-<script src="Assets/js_files/process.js">
+<script src="Controller/homepageController.js">
 
 </script>
+<script type="module" src="Controller/customer_Controller.js">
+
+</script>
+<script type="module" src="Controller/item_Controller.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
