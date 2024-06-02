@@ -1,8 +1,7 @@
- // import  Savearr  from "../Db/db.js";
  import {CustomerModel} from "../Models/CustomerModel.js";
-var Savearr=[]
-
+ import {Savearr} from "../Db/db.js";
 var recordIndex;
+import {addOptionToDropdown} from "./order_controller.js";
 
 $("#addBtn").on('click', () => {
  var id = $("#inputCusID").val();
@@ -11,33 +10,55 @@ $("#addBtn").on('click', () => {
  var number = $("#inputAddress2Cus").val();
 
  var Cusmodel = new CustomerModel(id, name, address, number);
- Savearr.push(Cusmodel);
- loadTable();
- $("#reset").click()
+
+ if (!(id === '' || name === '' || address === '' || number === '')) {
+  var valid = validation(id,name,address,number)
+  if (valid==true) {
+   Savearr.push(Cusmodel);
+   addOptionToDropdown(Cusmodel.id);
+   loadTable();
+   $("#reset").click()
+  }
+ }else {
+  alert("Fill in the empty Blanks");
+ }
 
 });
+ function validation(id, name, address, number) {
+  var idRegex = /^C\d{3}$/;
+  var numberRegex = /^07\d{8}$/;
 
-function loadTable() {
- console.log(Savearr);
- $("#cusTablebody").empty();
+  if (idRegex.test(id) && numberRegex.test(number)) {
+   return true;
+  } else {
+   alert("Not in correct format, please check the credentials again");
+   return false;
+  }
+ }
+  function loadTable() {
+   console.log(Savearr);
+   $("#cusTablebody").empty();
 
- Savearr.forEach(Item => {
-  var record = `
+   Savearr.forEach(Item => {
+   var record = `
             <tr>
                 <th scope="row" class="r1">${Item.id}</th>
                 <td class="r2">${Item.name}</td>
                 <td class="r3">${Item.address}</td>
                 <td class="r4">${Item.number}</td>
             </tr>`;
-  $("#cusTablebody").append(record);
- });
-}
+    $("#cusTablebody").append(record);
+   });
+ }
  $("#reset").on('click', () => {
   $("#inputCusID").val('');
   $("#NameCus").val('');
   $("#inputAddressCus").val('');
   $("#inputAddress2Cus").val('');
  });
+
+
+
 $("#cusTablebody").on('click','tr',function (){
 var index =$(this).index();
 recordIndex = index

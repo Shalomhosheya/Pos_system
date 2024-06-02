@@ -31,6 +31,7 @@ export  class CustomerModel {
         this._number = value;
     }
 
+
     constructor(id,name,address,number) {
        this._id = id;
         this._name = name;

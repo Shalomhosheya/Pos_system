@@ -1,7 +1,6 @@
 import {ItemModel} from "../Models/itemModel.js";
-
-var itemSavearr=[]
-
+import {itemSavearr} from "../Db/db.js";
+import {addOptionToDropdown, addOptionToDropdownitem} from "./order_controller.js";
 var recodindex
 $("#item_Add").on('click',()=>{
     var id = $("#inputIDItem").val()
@@ -10,11 +9,17 @@ $("#item_Add").on('click',()=>{
     var quantity = $("#inputAddress2").val()
     var amount = $("#inputAddress3").val()
 
-    console.log(id)
-    var itemModel = new ItemModel(id,type,title,quantity,amount)
-    itemSavearr.push(itemModel)
-    loadTable()
-    $("#item_Clear").click()
+    if (!(id === '' || type === '' || title === '' || quantity === ''|| amount==='')) {
+        console.log(id)
+        var itemModel = new ItemModel(id,type,title,quantity,amount)
+        itemSavearr.push(itemModel)
+        addOptionToDropdownitem(itemModel.id)
+        loadTable()
+        $("#item_Clear").click()
+    }else {
+        alert("Fill all the Blanks")
+    }
+
 })
 
 function loadTable(){

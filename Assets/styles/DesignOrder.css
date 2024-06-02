@@ -1,164 +1,48 @@
-h1{
+/*.postioning>.col-md-12>label{
+    color: black;
+    font-size: 15px;
     position: relative;
-    top: 20px;
-    left: 60px;
-    font-size: 25px;
+    right: 5rem;
+
+}*/
+.col{
+    padding-top: 3rem;
 }
-.block{
-    width: 450px;
-    aspect-ratio: 1/1;
-    background: white;
-    position: relative;
-    top: 50px;
-    left: 20px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.card{
     transition-duration: 1s;
 }
-.block:hover{
-    background:rgba(74, 128, 152, 0.8);
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-.up{
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+#addBtn2{
     position: relative;
-    top: 50px;
+    left:7rem;
+    top: 0.5rem;
 }
-.data{
-    position: absolute;
-    top: -20px;
-    left: 100px;
-}
-.data1{
-    position: absolute;
-    top: 150px;
-    left: 100px;
-}
-.data2{
-    position: absolute;
-    top: 250px;
-    left: 100px;
-}
-.data3{
-    position: absolute;
-    top: 60px;
-    left: -10px;
-    width: 0;
-    left: 100px;
-}
-.sep{
+#confirmBtn{
     position: relative;
-    top: 70px;
+    left:6rem;
+    top: 0.5rem;
 }
-.int{
-    width: 300px;
+#disBtn{
+    position: absolute;
+    right: 1rem;
+    top: 9.5rem;
+    width: 3rem;
+   height: 2rem;
+    font-size: 10px;
+}
+#table1{
     position: relative;
-    top: 80px;
-    left: 20px;
-
+    bottom: 10rem;
+    left: 0rem;
+    width: 80vw;
 }
-.btn1{
-    position: absolute;
-    top: 350px;
-    left: 360px;
-    width: 80px;
-   height: 30px;
-}
-.int2{
-    width: 300px;
+#table2{
     position: relative;
-    top: 10px;
-    left: 20px;
-
-}
-.text{
-    font-size: 14px;
-    width: 105px;
-}
-.orId{
-    position: relative;
-    left: -80px;
-    top: 35px;
-}
-.sep2{
-    position: absolute;
-    left: 125px;
-}
-.sep3{
-    position: absolute;
-    left: 125px;
-    top: 50px;
-}
-.jump{
-    position: absolute;
-    top: 115px;
-}
-.jump2{
-position: absolute;
-    top: 180px;
-}
-.date{
-    position: absolute;
-    top: 280px;
-    left: 125px;
-
-}
-.dlabel{
-    position: absolute;
-    left: -65px;
-
-}
-.detail{
-    top: 0;
-    position: absolute;
-    left: 100px;
-    font-size: 30px;
-}
-.block2{
-    background: transparent;
-    position: relative;
-    left: 500px;
-    top: -377px;
-    width: 450px;
-    aspect-ratio: 1/1;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    transition: 1s;
-}
-.block2:hover{
-    background:rgba(74, 128, 152, 0.8);
-}
-.block3{
-    width: 453px;
-    aspect-ratio: 1/1;
-    background: transparent;
-    position: relative;
-    top: -830px;
-    left: 1000px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-   transition: 1s;
-}
-.block3:hover{
-    background:rgba(74, 128, 152, 0.8);
-}
-.jump4{
-    position: absolute;
-    top: 150px;
-    left: 125px;
-}
-.jump5{
-    position: absolute;
-    top: 50px;
-    left: 125px;
-}
-.btn2{
-    position: absolute;
-    top: 400px;
-    left: 350px;
-}
-.table1{
-    position: absolute;
-    top: 650px;
-    width: 1300px;
-    aspect-ratio: 1/1;
-    left: 100px;
+    top: 2rem;
+    left: 0rem;
+    width: 80vw;
 }
 @media all and (max-width: 768px){
 
