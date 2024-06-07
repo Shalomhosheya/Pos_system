@@ -139,8 +139,23 @@ $('#disBtn').on('click', () => {
  totalDis = quantity - disprice; // Assuming you want to calculate the total discounted price
  $('#validationconfirmation3').val(totalDis); // Updating the quantity input with the result
 });
+
+function cashBack() {
+ var tp = parseFloat($('#validationconfirmation3').val());
+ var cash = parseFloat($('#validationconfirmation4').val());
+
+
+ return tp<cash;
+}
+
 $('#confirmBtn').on('click',()=>{
- myFunction();
+
+  let check = cashBack();
+  if (check){
+   myFunction();
+  }else {
+   alert("Insufficient Cash")
+  }
 })
 
 function loadTable2(orderArray) {
@@ -160,21 +175,27 @@ function loadTable2(orderArray) {
 function myFunction() {
  if (confirm("Add the order")) {
   var orderId = $('#validationconfirmation1').val();
-  var total = $('#validationconfirmation3').val();
-  var disPrice = $('#validationconfirmation2').val();
+  var total = parseFloat($('#validationconfirmation3').val());
+  var disPrice = parseFloat($('#validationconfirmation2').val());
+  var cash = parseFloat($('#validationconfirmation4').val());
+  var balanceField = $('#validationconfirmation6');
 
   // Log the values to verify
   console.log(orderId);
   console.log(total);
   console.log(disPrice);
+  console.log(cash);
 
   // Push the order details as an array to OrderArray2
   OrderArray2.push([orderId, total, disPrice]);
 
-  // Load the table with the updated OrderArray2
   loadTable2(OrderArray2);
- } else {
 
+  // Calculate and set the balance
+  var balance = cash - total;
+  balanceField.val(balance);
+ } else {
   console.log('Order was not confirmed.');
  }
 }
+
