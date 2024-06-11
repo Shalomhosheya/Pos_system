@@ -117,8 +117,10 @@ $('#addBtn2').on('click', () => {
  var quantity = parseFloat($('#validationItem2').val());
  var unitPrice = parseFloat($('#validationItem3').val());
  var priceTotal = $('#validationconfirmation3');
+ var selectItem = $('#selectItem').val()
+ var selectCus = $('#selectCus').val()
 
- if (!CusName || !itemName || isNaN(quantity) || isNaN(unitPrice)) {
+ if (!CusName || !itemName || isNaN(quantity) || isNaN(unitPrice) || !selectItem || !selectCus) {
   alert('Please fill in all fields correctly.');
   return;
  }
@@ -140,6 +142,16 @@ $('#disBtn').on('click', () => {
  $('#validationconfirmation3').val(totalDis); // Updating the quantity input with the result
 });
 
+function empty() {
+ $('#validationconfirmation3').val("");
+ $('#validationItem2').val("")
+ $('#validationconfirmation1').val("")
+ $('#validationconfirmation2').val("")
+ $('#validationconfirmation4').val("")
+
+
+}
+
 function cashBack() {
  var tp = parseFloat($('#validationconfirmation3').val());
  var cash = parseFloat($('#validationconfirmation4').val());
@@ -153,6 +165,7 @@ $('#confirmBtn').on('click',()=>{
   let check = cashBack();
   if (check){
    myFunction();
+   empty();
   }else {
    alert("Insufficient Cash")
   }

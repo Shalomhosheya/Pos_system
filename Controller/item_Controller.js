@@ -2,6 +2,26 @@ import {ItemModel} from "../Models/itemModel.js";
 import {itemSavearr} from "../Db/db.js";
 import {addOptionToDropdown, addOptionToDropdownitem} from "./order_controller.js";
 var recodindex
+
+function validation(amount) {
+   var regex = /^\d*$/;
+   if (regex.test(amount)){
+           return true;
+   }else {
+     return false;
+   }
+
+}
+
+function validationID(id) {
+    var idRegex = /^I\d{3}$/;
+    if (idRegex.test(id)){
+        return true;
+    }else {
+        return false;
+    }
+}
+
 $("#item_Add").on('click',()=>{
     var id = $("#inputIDItem").val()
     var type = $("#NameItem").val()
@@ -10,12 +30,22 @@ $("#item_Add").on('click',()=>{
     var amount = $("#inputAddress3").val()
 
     if (!(id === '' || type === '' || title === '' || quantity === ''|| amount==='')) {
-        console.log(id)
-        var itemModel = new ItemModel(id,type,title,quantity,amount)
-        itemSavearr.push(itemModel)
-        addOptionToDropdownitem(itemModel.id)
-        loadTable()
-        $("#item_Clear").click()
+       var valid = validation(amount);
+        if (valid==true){
+            var valid2 = validationID(id);
+            if (valid2==true){
+                console.log(id)
+                var itemModel = new ItemModel(id,type,title,quantity,amount)
+                itemSavearr.push(itemModel)
+                addOptionToDropdownitem(itemModel.id)
+                loadTable()
+                $("#item_Clear").click()
+            }else {
+                alert("Please insert ID format as I0XX im the relevant Field")
+            }
+        }else {
+            alert("Please insert a amount in the Field")
+        }
     }else {
         alert("Fill all the Blanks")
     }
