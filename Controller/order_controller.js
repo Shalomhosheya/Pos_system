@@ -160,15 +160,51 @@ function cashBack() {
  return tp<cash;
 }
 
+function validation1(orderId) {
+ var regex = /^O\d{3}$/;
+ if (regex.test(orderId)){
+  return true;
+ }else {
+  return false;
+ }
+
+ return undefined;
+}
+
+function validation2(cash, disprice) {
+ var regex = /^\d*$/;
+ if (regex.test(cash) && regex.test(disprice)) {
+  return true;
+ } else {
+  return false;
+ }
+}
+
+
 $('#confirmBtn').on('click',()=>{
 
   let check = cashBack();
-  if (check){
-   myFunction();
-   empty();
+  var  orderId = $('#validationconfirmation1').val();
+  var cash =($('#validationconfirmation4').val());
+ var disPrice = ($('#validationconfirmation2').val());
+
+  let valid = validation1(orderId);
+  let valid2 = validation2(cash,disPrice);
+  if (valid==true){
+   if (valid==true){
+    if (check==true){
+     myFunction();
+     empty();
+    }else {
+     alert("Insufficient Cash")
+    }
+   }else {
+    alert("Please enter in OrderId correct format As Oxxx")
+   }
   }else {
-   alert("Insufficient Cash")
+   alert("Please recheck the cash and Discount are entered in Number Units")
   }
+
 })
 
 function loadTable2(orderArray) {
