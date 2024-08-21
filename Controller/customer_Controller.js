@@ -35,7 +35,7 @@ $.ajax({
  }
 });
   // addOptionToDropdown(Cusmodel.id);
-  loadTable();
+ // loadTable();
    $("#reset").click()
   }
  }else {
@@ -126,8 +126,25 @@ recordIndex = index
 })
 
  $('#delete').on('click',()=>{
-Savearr.splice(recordIndex,1)
-  loadTable()
+  var cusid = $("#inputCusID").val();
+  $.ajax({
+   url:"http://localhost:8085/JNDI/customer",
+   method:"DELETE",
+   contentType:"application/json",
+   "data":JSON.stringify({
+    id:cusid,
+   }),
+   success:function(results){
+    console.log(results);
+
+   },
+   error:function(error){
+    console.log(error);
+
+   }
+  });
+
+//  loadTable()
   $("#reset").click()
  })
 
@@ -137,13 +154,25 @@ Savearr.splice(recordIndex,1)
   var cusaddress = $("#inputAddressCus").val();
   var cusnumber = $("#inputAddress2Cus").val();
 
-  var cusObj = Savearr[recordIndex]
+  $.ajax({
+   url:"http://localhost:8085/JNDI/customer",
+   method:"PATCH",
+   contentType:"application/json",
+   "data":JSON.stringify({
+    id:cusid,
+    name:cusname,
+    address:cusaddress,
+    number:cusnumber
+   }),
+   success:function(results){
+    console.log(results);
 
-  cusObj.id = cusid
-  cusObj.name=cusname
-  cusObj.address=cusaddress
-  cusObj.number=cusnumber
+   },
+   error:function(error){
+    console.log(error);
 
-  loadTable()
+   }
+  });
+ // loadTable()
   $("#reset").click()
  })
