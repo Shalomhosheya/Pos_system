@@ -35,10 +35,22 @@ $("#item_Add").on('click',()=>{
             var valid2 = validationID(id);
             if (valid2==true){
                 console.log(id)
-                var itemModel = new ItemModel(id,type,title,quantity,amount)
+               /* var itemModel = new ItemModel(id,type,title,quantity,amount)
                 itemSavearr.push(itemModel)
-                addOptionToDropdownitem(itemModel.id)
-                loadTable()
+                addOptionToDropdownitem(itemModel.id)*/
+                $.ajax({
+                    url: "http://localhost:8085/JNDI/item",
+                    method: "POST",
+                    contentType: "application/json",
+                    "data": JSON.stringify({
+                        id: id,
+                        type: type,
+                        title: title,
+                        quantity: quantity,
+                        amount: amount
+                    }),
+                })
+              //  loadTable()
                 $("#item_Clear").click()
             }else {
                 alert("Please insert ID format as I0XX im the relevant Field")
@@ -105,14 +117,26 @@ $("#item_Update").on('click',()=>{
     var quantity = $("#inputAddress2").val()
     var amount = $("#inputAddress3").val()
 
-    var obj2 = itemSavearr[recodindex]
+    $.ajax({
+        url:"http://localhost:8085/JNDI/item",
+        method:"PATCH",
+        contentType:"application/json",
+        "data":JSON.stringify({
+            id2:id,
+            type2:type,
+            title2:title,
+            quantity2:quantity,
+            amount2:amount
+        }),
+        success:function(results){
+            console.log(results);
 
-    obj2.id=id
-    obj2.type=type
-    obj2.title=title
-    obj2.quantity=quantity
-    obj2.amount=amount
+        },
+        error:function(error){
+            console.log(error);
 
-    loadTable()
-    $("#item_Clear").click()
+        }
+    });
+   // loadTable()
+  //  $("#item_Clear").click()
 })
