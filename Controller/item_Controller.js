@@ -106,8 +106,26 @@ $("#item_table_body").on('click','tr',function (){
 })
 
 $("#item_Delete").on('click',()=>{
-    itemSavearr.splice(recodindex,1)
-    loadTable()
+    var id = $("#inputIDItem").val()
+
+    /*itemSavearr.splice(recodindex,1)
+    loadTable()*/
+    $.ajax({
+        url:"http://localhost:8085/JNDI/item",
+        method:"DELETE",
+        contentType:"application/json",
+        "data":JSON.stringify({
+            id2:id,
+        }),
+        success:function(results){
+            console.log(results);
+
+        },
+        error:function(error){
+            console.log(error);
+
+        }
+    });
     $("#item_Clear").click()
 })
 $("#item_Update").on('click',()=>{
