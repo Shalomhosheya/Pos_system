@@ -107,6 +107,7 @@ $("#item_table_body").on('click','tr',function (){
 
 $("#item_Delete").on('click',()=>{
     var id = $("#inputIDItem").val()
+    console.log(id)
 
     /*itemSavearr.splice(recodindex,1)
     loadTable()*/
@@ -115,7 +116,7 @@ $("#item_Delete").on('click',()=>{
         method:"DELETE",
         contentType:"application/json",
         "data":JSON.stringify({
-            id2:id,
+            id:id,
         }),
         success:function(results){
             console.log(results);
