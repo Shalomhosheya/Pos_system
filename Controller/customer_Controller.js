@@ -16,21 +16,24 @@ $("#addBtn").on('click', () => {
   if (valid==true) {
 
 $.ajax({
- url:"http://localhost:8085/JNDI/customer",
+ url:"http://localhost:8080/springPos/api/v1/customer/save",
  method:"POST",
  contentType:"application/json",
  "data":JSON.stringify({
   id:id1,
-  name:name1,
   address:address1,
+  name:name1,
   number:number1
 }),
  success:function(results){
   console.log(results);
+  alert("Success")
 
  },
  error:function(error){
   console.log(error);
+  alert("Fail")
+
 
  }
 });
